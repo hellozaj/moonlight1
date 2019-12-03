@@ -1,0 +1,39 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql:///jianzhi?unicode=true&amp;characterEncoding=utf8
+    username: root
+    password: 123321
+  jpa:
+    database: mysql
+    show-sql: true
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+mybatis:
+    mapper-locations: classpath:mapper/*mapper.xml
+    type-aliases-package: com.qf.pojo
+#七牛云
+qiniu:
+        accessKey: m7mFmCTX55PMNPkEBaOLFQMLxW4ZFfZwf2EBm1M2
+        secretKey: dn220PqIs813-IYrIZtzO_bGLXPo3QSVNep6wNty
+        bucket:  1908-picture
+        url: http://q1arif8n1.bkt.clouddn.com/
+  #邮箱配置
+  mail:
+    host: smtp.qq.com
+    username: 1109758563@qq.com
+    #QQ邮箱的授权码
+    password: utihsyiaopacghfg
+    default-encoding: UTF-8
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+#设置一个邮件发送人
+lance:
+  mail:
+    sender: 1109758563@qq.com
